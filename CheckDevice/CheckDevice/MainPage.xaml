@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CheckDevice.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodel="clr-namespace:CheckDevice.ViewModel"
+    x:DataType="viewmodel:DeviceViewModel">
+    <ContentPage.BindingContext>
+        <viewmodel:DeviceViewModel />
+    </ContentPage.BindingContext>
+    <StackLayout Margin="0,10">
+        <Label
+            FontSize="Large"
+            HorizontalOptions="CenterAndExpand"
+            Text="Informações do dispositivo:" />
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Device: " />
+                        <Span Text="{Binding Device}" TextColor="Red" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="ManuFacturer: " />
+                        <Span Text="{Binding ManuFacturer}" TextColor="Red" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="DeviceName: " />
+                        <Span Text="{Binding DeviceName}" TextColor="Red" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="DeviceType: " />
+                        <Span Text="{Binding DeviceType}" TextColor="Red" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Platform: " />
+                        <Span Text="{Binding Platform}" TextColor="Red" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
