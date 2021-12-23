@@ -8,7 +8,7 @@
     <ContentPage.BindingContext>
         <viewmodel:DeviceViewModel />
     </ContentPage.BindingContext>
-    <StackLayout Margin="0,10">
+    <StackLayout  Margin="{OnPlatform Android='0,10', iOS='0,40'}">
         <Label
             FontSize="Large"
             HorizontalOptions="CenterAndExpand"
